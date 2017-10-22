@@ -5,7 +5,7 @@ from flask import Flask, request, abort, send_file
 
 app = Flask(__name__)
 
-upload_folder = WebhookHandler(os.environ['UploadFolder'])  # Upload folder path
+upload_folder = os.environ['UploadFolder']  # Upload folder path
 
 @app.route('/post',methods=['POST'])
 def show_post():
