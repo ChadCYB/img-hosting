@@ -1,0 +1,10 @@
+services:
+  image-server:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    restart: always
+    ports:
+      - 8002:8002
+    volumes:
+      - ./image_server/images:/code/images
