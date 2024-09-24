@@ -2,11 +2,15 @@
 This is a python-base image hosting service.
 
 ## Send an image
-API: `POST /post/`
+API: `POST /upload/`
 
-Parameter: `imgb64=<img base64 string>`
+Parameter: `file=<form-data>`
+
+Return: `{"filename": "<image_filename>"}`
 
 ## Get an image
 API: `GET /img/<filename>/`
 
 Parameter: `filename=<filename>`
+
+Return: `the image file`
